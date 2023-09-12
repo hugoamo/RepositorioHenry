@@ -183,18 +183,49 @@ function esPrimo(num) {
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
 
+   if (num < 1) {
+      return false
+   } else {
+      divisores = 0
+      for (let i = 1; i <= num; i++) {
+         if (num % i == 0) {
+            divisores++
+         }
+      }
+      if (divisores > 2) {
+         return false
+      }
+   }
+   if (divisores === 2) {
+      return true
+   } else {
+      return false
+   }
 }
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
+   if (valor === true) {
+      return "Soy verdadero"
+   } else {
+      return "Soy falso"
+   }
 }
 
 function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
+   const numComoString = num.toString();
+
+   if (numComoString.length === 3) {
+      return true;
+   } else {
+      return false;
+   }
+
 }
 
 function doWhile(num) {
@@ -202,6 +233,14 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   var limite = 0
+   var valorFinal = 0
+   do {
+      num = num + 5
+      valorFinal = num
+      limite++
+   } while (limite < 8);
+   return valorFinal
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
